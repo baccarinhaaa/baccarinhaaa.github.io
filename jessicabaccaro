@@ -61,9 +61,10 @@
             "Prédio 1": { coords: [-23.214401, -46.891619], curso: "Engenharia da Computação", disciplinas: ["Algoritmos", "Estruturas de Dados"], sala: "101", andar: "1º Andar", professor: "Prof. Carlos Silva", coordenador: "Dra. Mariana Souza", color: "red" },
             "Prédio 2": { coords: [-23.212857, -46.892859], curso: "Administração", disciplinas: ["Gestão Financeira", "Marketing"], sala: "202", andar: "2º Andar", professor: "Prof. Fernanda Lima", coordenador: "Dr. João Almeida", color: "blue" },
             "Prédio 3": { coords: [-23.213977, -46.892892], curso: "Psicologia", disciplinas: ["Psicologia Clínica", "Neurociência"], sala: "303", andar: "3º Andar", professor: "Prof. Ricardo Mendes", coordenador: "Dra. Camila Torres", color: "green" },
-            "Cantina 1": { coords: [-23,214486, -46,892664], color: "brown" },
-            "Cantina 2": { coords: [-23,213242, -46,894299], color: "brown" },
-            "Anfiteatro": { coords: [-23,215346, -46,891206], color: "yellow" }
+            "Prédio 4": { coords: [-23,214460, -46,893431], curso: "Direito", disciplinas: ["Direito Penal", "Direito Civil"], sala: "404", andar: "4º Andar", professor: "Prof. Ana Souza", coordenador: "Dr. Pedro Lima", color: "purple" },
+            "Cantina 1": { coords: [-23.214486, -46.892664], color: "yellow" },
+            "Cantina 2": { coords: [-23.213242, -46.894299], color: "yellow" },
+            "Anfiteatro": { coords: [-23.215346, -46.891206], color: "yellow" }
         };
 
         function getIcon(color) {
@@ -102,7 +103,7 @@
             var detalhes = `
                 <strong>${nome}</strong><br>
                 ${local.curso ? `<strong>Curso:</strong> ${local.curso} <br>` : ''}
-                ${local.disciplinas.length ? `<strong>Disciplinas:</strong> ${local.disciplinas.join(", ")} <br>` : ''}
+                ${local.disciplinas && local.disciplinas.length ? `<strong>Disciplinas:</strong> ${local.disciplinas.join(", ")} <br>` : ''}
                 ${local.sala ? `<strong>Sala:</strong> ${local.sala} - ${local.andar} <br>` : ''}
                 ${local.professor ? `<strong>Professor:</strong> ${local.professor} <br>` : ''}
                 ${local.coordenador ? `<strong>Coordenador:</strong> ${local.coordenador}` : ''}
